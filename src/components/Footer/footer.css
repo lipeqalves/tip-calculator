@@ -1,0 +1,11 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--neutral-very-dark-cyan);
+}
+.attribution p {
+  margin-bottom: 5px;
+  color: var(--primary-strong-cyan);
+}

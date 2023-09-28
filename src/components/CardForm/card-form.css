@@ -1,0 +1,120 @@
+.card {
+  max-width: 300px;
+  width: 50%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: red;
+  font-weight: normal;
+}
+.form-btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 0;
+}
+.custom {
+  width: 30%;
+}
+.custom input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--neutral-very-dark-cyan);
+}
+legend {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.input-radio {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0%;
+  cursor: pointer;
+}
+.input-radio:checked{
+  background-color: var(--primary-strong-cyan);
+  color: var(--neutral-very-dark-cyan);
+}
+.label-radio {
+  width: 100%;
+  cursor: pointer;
+}
+.btn-radio {
+  width: 30%;
+  height: 50%;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: var(--neutral-very-dark-cyan);
+  color: var(--neutral-color-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-radio:hover {
+  background-color: var(--primary-strong-cyan);
+  color: var(--neutral-very-dark-cyan);
+}
+.input-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.input {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+}
+input::placeholder {
+  margin-right: 15px;
+}
+.input,
+.custom input {
+  color: var(--neutral-grayish-cyan);
+  background-color: var(--neutral-very-light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+.input:focus-visible,
+.custom input:focus-visible {
+  outline: 2px solid var(--primary-strong-cyan);
+}
+
+.icons {
+  position: absolute;
+  left: 8px;
+}
+@media screen and (max-width: 650px) {
+  .card{
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.card-resultado {
+  max-width: 300px;
+  width: 50%;
+  height: 350px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--neutral-very-dark-cyan);
+}
+
+.resultado {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.tip p,
+.total p {
+  font-size: 12px;
+  text-align: left;
+}
+.total p:last-of-type, .tip p:last-of-type{
+  color: var(--neutral-dark-grayish-cyan);
+}
+.valor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-strong-cyan);
+  font-size: 28px;
+}
+.btn-reset{
+  margin-top: 70px;
+  width: 90%;
+  height: 35px;
+}
+
+@media screen and (max-width: 650px) {
+  .card-resultado{
+    width: 100%;
+  }
+}
