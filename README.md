@@ -95,7 +95,7 @@ export const CalculoTaxaServico = (valor, percento) => {
 
 - Estrutura do projeto:
 
-![Estrutura do projeto](image-4.png)
+![Estrutura do projeto](./src/assets/images/image-4.png)
 
 #### Próximos Passos
 
