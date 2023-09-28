@@ -2,7 +2,7 @@
 
 ## Frontend Mentor - Tip calculator app solution
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Os desafios do Frontend Mentor ajudam você a melhorar suas habilidades de codificação através da construção de projetos realistas.
 
 ### Índice
 
@@ -20,10 +20,10 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 #### O desafio
 
-- Construir uma aplicação geradora de conselho usando a API Advice Slip.
+- Construir um aplicativo que calcula gorjetas(Tip calculator).
   - Layout responsivo;
   - Ter os estados de foco para todos os elementos interativos na página;
-  - Gerar um novo conselho clicando no ícone de dado.
+  - Calcular a gorjeta correta e o custo total da conta por pessoa.
 
 #### Screenshot
 

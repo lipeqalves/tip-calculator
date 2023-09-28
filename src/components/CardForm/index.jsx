@@ -37,7 +37,6 @@ const CardForm = () => {
     useContext(TaxaServicoContext);
 
   const onSubmit = (data) => {
-    console.log(data);
     handleTaxaServico(
       data.conta,
       data.percente ? data.percente : data.custom,
