@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { TaxaServicoContext } from "../../context";
 
 const CardForm = () => {
-  //const valor = 280.0;
   const { taxaServico, taxaServicoPeople, handleReset, isHabilit } = useContext(TaxaServicoContext);
   return (
     <section className="card-resultado">

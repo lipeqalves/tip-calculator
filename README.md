@@ -27,12 +27,14 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 #### Screenshot
 
-![Resultado Desktop](./images/image-1.png)
-![Resultado Mobile](./images/image-2.png)
+![Resultado Desktop](./src/assets/images/image.png)
+![Resultado Desktop - errors](./src/assets/images/image-1.png)
+![Resultado Mobile](./src/assets/images/image-2.png)
+![Resultado Mobile-continuação](./src/assets/images/image-3.png)
 
 #### Links
 
-- Solution URL: [Advice generator app](https://advice-generator-nu-three.vercel.app/)
+- Solution URL: [Tip Calculator app](https://tip-calculator-nine-red.vercel.app/)
 
 ### Desenvolvimento
 
@@ -43,32 +45,61 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - Flexbox
 - Layout Responsivo
 - [React](https://reactjs.org/) - Documentação
-- [Axios](https://axios-http.com/ptbr/docs/intro) - Documentação
+- [React Hook Form](https://react-hook-form.com/) - Documentação
+- [React Icons](https://react-icons.github.io/react-icons) - Documentação
+- [Yup](https://www.npmjs.com/package/yup) - Documentação
 
 #### Aprendizado
 
-Esse projeto tem como objetivo praticar o desenvolvimento web com React, o principal conceito colocado em prática foi o comsumo de Api utilizando  Axios(Cliente HTTP baseado em promise para o navegador e Node.js), que foi utilizado para buscar dados da API Advice Slip .
+Esse projeto tem como objetivo praticar o desenvolvimento web com React, o principal conceito colocado em prática foi o uso de formulário rativo com o React Hook Form. Foi utilizado o yup integrado com react-hook-form para criar as validação, por fim utilizei o react-icons para adicionar os ícones do input.
 
-- Exemplo de parte do código usado para acessar a api:
+- Exemplo de parte do código usando o React Hook Form:
 
 ```js
-import axios from "axios";
+import { useForm } from "react-hook-form";
+const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(schema) });
 
-const api = axios.create(
-    {
-        baseURL:'https://api.adviceslip.com/advice',
-    }
-)
-export default api;
+  <form onSubmit={handleSubmit(onSubmit)}>
+        <fieldset>
+          <legend>
+            Bill
+            <span className="error" role="alert">
+              {errors.conta?.message}
+            </span>
+          </legend>
+          <div className="input-icons">
+            <MdAttachMoney className="icons" />
+            <input
+              className="input"
+              type="texto"
+              placeholder="0.00"
+              {...register("conta", { required: true, min: 1 })}
+              aria-invalid={errors.conta ? "true" : "false"}
+            />
+          </div>
+        </fieldset>
 ```
 
-- Exemplo exemplo do resultado da requisição:
+- Exemplo da função que calcula a gorjeta o valor total por pessoa:
 
-![Resposta da requisição GET](./images/image.png)
+```js
+export const CalculoTaxaServico = (valor, percento) => {
+  const taxaServico = (parseFloat(valor) * parseInt(percento)) / 100;
+  return taxaServico.toFixed(2);
+};
+```
+
+- Estrutura do projeto:
+
+![Estrutura do projeto](image-4.png)
 
 #### Próximos Passos
 
-Continuarei estudando ReactJs, e meu próximo objetivo é usar styled-components nos projetos.
+Continuarei estudando React, pretendo explorar mais o react-hook-form e para estilização usar styled-components.
 
 ### Autor
 
